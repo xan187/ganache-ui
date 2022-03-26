@@ -38,7 +38,9 @@
     "test-mocha": "cross-env GANACHE_DEV_MODE=true ELECTRON_APP_PATH=./ mocha --require @babel/register --check-leaks 'test/mocha/**/*.test.js'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "postinstall": "cd static/node && npm ci --only=prod"
+    "postinstall": "cd static/node && npm ci --only=prod",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@exponent/electron-cookies": "^2.0.0",
@@ -97,7 +99,8 @@
     "web3-providers-http": "1.2.6",
     "web3-providers-ws": "1.2.6",
     "xterm": "^4.4.0",
-    "xterm-addon-fit": "^0.3.0"
+    "xterm-addon-fit": "^0.3.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -252,5 +255,6 @@
   },
   "engines": {
     "node": "12.13.1"
-  }
+  },
+  "snyk": true
 }
