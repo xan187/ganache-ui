@@ -61,7 +61,7 @@
     "lodash.isequal": "^4.5.0",
     "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.26",
     "moniker": "^0.1.2",
     "node-fetch": "2.6.0",
