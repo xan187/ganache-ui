@@ -38,7 +38,9 @@
     "test-mocha": "cross-env GANACHE_DEV_MODE=true ELECTRON_APP_PATH=./ mocha --require @babel/register --check-leaks 'test/mocha/**/*.test.js'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "postinstall": "cd static/node && npm ci --only=prod"
+    "postinstall": "cd static/node && npm ci --only=prod",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "@exponent/electron-cookies": "^2.0.0",
@@ -52,7 +54,7 @@
     "ethereumjs-units": "^0.2.0",
     "filesize": "^3.6.1",
     "fix-path": "^4.0.0",
-    "follow-redirects": "1.9.0",
+    "follow-redirects": "1.14.8",
     "fs-extra": "9.0.0",
     "get-port": "^5.0.0",
     "history": "4.10.1",
@@ -61,12 +63,12 @@
     "lodash.isequal": "^4.5.0",
     "lodash.merge": "^4.6.2",
     "lodash.omit": "^4.5.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.26",
     "moniker": "^0.1.2",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.7",
     "node-localstorage": "^2.1.6",
-    "node-ssh": "7.0.0",
+    "node-ssh": "12.0.0",
     "pg": "7.14.0",
     "pluralize": "^5.0.0",
     "promisify-child-process": "^3.1.3",
@@ -81,7 +83,7 @@
     "react-render-html": "^0.6.0",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
-    "react-syntax-highlighter": "11.0.2",
+    "react-syntax-highlighter": "13.0.0",
     "react-virtualized": "^9.21.0",
     "redux": "4.0.4",
     "redux-logger": "^2.7.4",
@@ -90,14 +92,15 @@
     "semver-parser": "3.0.4",
     "shebang-loader": "^0.0.1",
     "source-map-support": "^0.5.13",
-    "truffle": "5.1.20",
+    "truffle": "5.1.34",
     "universal-analytics": "^0.4.13",
     "unzip-stream": "0.3.0",
-    "web3": "1.2.6",
-    "web3-providers-http": "1.2.6",
-    "web3-providers-ws": "1.2.6",
+    "web3": "1.7.5",
+    "web3-providers-http": "1.3.6",
+    "web3-providers-ws": "1.3.6",
     "xterm": "^4.4.0",
-    "xterm-addon-fit": "^0.3.0"
+    "xterm-addon-fit": "^0.3.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -252,5 +255,6 @@
   },
   "engines": {
     "node": "12.13.1"
-  }
+  },
+  "snyk": true
 }
